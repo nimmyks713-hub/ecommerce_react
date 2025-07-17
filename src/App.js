@@ -1,23 +1,36 @@
 import logo from './logo.svg';
 import './App.css';
+import Home from './Components/Home/Home';
+import Aboutus from './Components/Aboutus/Aboutus'
+import Header from './Components/Header/Header'
+import Footer from './Components/Footer/Footer'
+import Contactus from './Components/Contactus/Contactus';
+import Productslist from './Components/Products/Productlist';
+import Productdetail from './Components/Products/Productdetail';
+import {Route,Routes} from 'react-router-dom'
+import { useState } from 'react';
+import Cartcontext from './Contexts/Cartcontext';
+import Cart from './Components/Products/Cart'
 
 function App() {
+  const [cartProducts,setCartProducts]=useState([]);
+  function saveCart(product){
+    setCartProducts((prevCart)=>[...prevCart,product]);
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Cartcontext.Provider value={{cartProducts:cartProducts,saveCart:saveCart}}>
+      <Header />
+      <Routes>
+        <Route path='/' element={<Home/>}></Route>
+        <Route path="/aboutus" element={<Aboutus/>}></Route>
+        <Route path='/contactus' element={<Contactus/>}></Route>
+        <Route path='/productlist' element={<Productslist/>}></Route>
+        <Route path='/productlist/:prodId' element={<Productdetail/>}></Route>
+        <Route path='/cart' element={<Cart/>}></Route>
+      </Routes>
+      <Footer />
+      </Cartcontext.Provider>
     </div>
   );
 }
