@@ -2,6 +2,7 @@
     display:flex;
     justify-content: space-around;
     align-items: center;
+    gap:30px;
 }
 .cart-image{
 width:120px;

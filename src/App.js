@@ -17,9 +17,12 @@ function App() {
   function saveCart(product){
     setCartProducts((prevCart)=>[...prevCart,product]);
   }
+  function removeCart(productId){
+    setCartProducts((prevCart)=>prevCart.filter(item=>item.id!==productId))
+  }
   return (
     <div>
-      <Cartcontext.Provider value={{cartProducts:cartProducts,saveCart:saveCart}}>
+      <Cartcontext.Provider value={{cartProducts:cartProducts,saveCart:saveCart,removeCart:removeCart}}>
       <Header />
       <Routes>
         <Route path='/' element={<Home/>}></Route>

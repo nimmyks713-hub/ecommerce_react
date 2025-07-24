@@ -3,14 +3,14 @@ import '../../Styles/Cart.css';
 import Cartcontext from "../../Contexts/Cartcontext";
 import Cartcard from "./Cartcard";
 function Cart(){
-    const {cartProducts} = useContext(Cartcontext);
+    const {cartProducts,removeCart} = useContext(Cartcontext);
     return(
         <div className="cart-main">
         <h2>Shopping Cart</h2>
         <hr/>
         {
                 cartProducts.map((c,index)=>(
-                 <Cartcard key={index} cartproduct={c}></Cartcard>
+                 <Cartcard key={index} cartproduct={c} removeCart={removeCart}></Cartcard>
             ))
         }
         </div>
