@@ -16,6 +16,22 @@ import plush from '../../Assets/plush.avif'
 import scooter from '../../Assets/scooter.jpg'
 import toys from '../../Assets/toys.webp'
 import pushpop from '../../Assets/pushpop.jpg'
+import backpack from '../../Assets/backpack.webp'
+import tshirt from '../../Assets/tshirt.jpg'
+import jacket from '../../Assets/jacket.jpg'
+import casual from '../../Assets/casual.webp'
+import bracelet from '../../Assets/bracelet.webp'
+import goldpetite from '../../Assets/goldpetite.jpg'
+import whitegold from '../../Assets/whitegold.jfif'
+import rosegold from '../../Assets/rosegold.webp'
+import siliconpower from '../../Assets/siliconpower.jpg'
+import internalssd from '../../Assets/Internalssd.webp'
+import gamingdrive from '../../Assets/gamingdrive.jpg'
+import playstation from '../../Assets/playstation.jfif'
+import necklace from '../../Assets/necklace.webp'
+import jenas from '../../Assets/jenas.jpg'
+import handbag from '../../Assets/handbag.webp'
+import dress from '../../Assets/dress.webp'
 
 function Offerlist(){
     const offer=[
@@ -23,10 +39,10 @@ function Offerlist(){
             id:1,
             title:"Welcome to shopaholic| Your savings corner",
             image:[
-                "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
-                "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg",
-                "https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg",
-                "https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_.jpg"
+                dress,
+                handbag,
+                jenas,
+                necklace
             ],
             subtitle:[
                  "Coupons and Benefits",
@@ -39,10 +55,10 @@ function Offerlist(){
             id:2,
             title:"Upto 20% off - Electronics",
             image:[
-             "https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_.jpg",
-             "https://fakestoreapi.com/img/61mtL65D4cL._AC_SX679_.jpg",
-             "https://fakestoreapi.com/img/71kWymZ+c+L._AC_SX679_.jpg",
-             "https://fakestoreapi.com/img/61mtL65D4cL._AC_SX679_.jpg"
+             internalssd,
+             gamingdrive,
+             siliconpower,
+             playstation
             ],
             subtitle:[
                 "Internal SSD",
@@ -55,10 +71,10 @@ function Offerlist(){
             id:3,
             title:"New arrivals|Watches and Jwellery|Upto 50% off",
             image:[
-             "https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg",
-             "https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg",
-             "https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_.jpg",
-             "https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_.jpg"
+             bracelet,
+             goldpetite,
+             whitegold,
+             rosegold
             ],
             subtitle:[
             "Bracelet",
@@ -71,10 +87,10 @@ function Offerlist(){
             id:4,
             title:"Just landed for men|Upto 40% off",
             image:[
-            "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
-            "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg",
-            "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg",
-            "https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg"
+            backpack,
+            tshirt,
+            jacket,
+            casual
             ],
             subtitle:[
                "Backpack",

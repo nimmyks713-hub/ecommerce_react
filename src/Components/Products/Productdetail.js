@@ -1,26 +1,17 @@
 import { useParams } from "react-router-dom";
-import { useContext, useEffect,useState } from "react";
-import Cartcontext from "../../Contexts/Cartcontext";
+import { useEffect } from "react";
+import { useDispatch,useSelector } from "react-redux";
 import '../../Styles/Productdetail.css'
+import { fetchProductsById } from "../../Features/Products/productsSlice";
+import { addToCart } from "../../Features/Cart/cartSlice";
 function Productdetail(){
-    const cartParams=useContext(Cartcontext);
     const params = useParams();
-    const [prods,setProds]=useState(null);
     const prodId = params.prodId;
-    function loadProds(){
-        fetch("https://fakestoreapi.com/products/"+prodId).then((response)=>
-        response.json()).then((data)=>{
-            setProds(data);
-        }).
-        catch((error)=>{
-            console.log(error);
-        });
-    }
+    const dispatch = useDispatch();
     useEffect(()=>{
-        loadProds();},[prodId]);
-     if(!prods){
-        return <p>Loading Product details...</p>
-     }
+        dispatch(fetchProductsById(prodId));},[prodId]);
+     const isLoading = useSelector((state)=>state.products.productDetailLoading);
+     const prods=useSelector((state)=>state.products.selectedProduct);
      function star(){
     var st="";
     for(var i=0;i<Math.round(prods.rating.rate);i++){
@@ -28,11 +19,9 @@ function Productdetail(){
     }
     return st;
 }
-function handleClick()
-{
-   cartParams.saveCart(prods);
-}
-console.log(cartParams.cartProducts);
+if (isLoading || !prods) {
+        return <h5>Loading... Please wait</h5>;
+    }
     return(
         <div className="detail">
             <div className="detail-img">
@@ -55,7 +44,7 @@ console.log(cartParams.cartProducts);
             <hr/>
             <h5>About this item</h5>
             <p className="description">{prods.description}</p>
-            <button className="add_cart" onClick={handleClick}>Add to Cart</button>
+            <button className="add_cart" onClick={()=>dispatch(addToCart(prods))}>Add to Cart</button>
         </div>      
         </div>
     )

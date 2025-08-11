@@ -1,16 +1,15 @@
-import { useContext } from "react";
 import '../../Styles/Cart.css';
-import Cartcontext from "../../Contexts/Cartcontext";
 import Cartcard from "./Cartcard";
+import { useSelector } from 'react-redux';
 function Cart(){
-    const {cartProducts,removeCart} = useContext(Cartcontext);
+    const cartProducts = useSelector((state)=>state.cart.cartProducts);
     return(
         <div className="cart-main">
         <h2>Shopping Cart</h2>
         <hr/>
         {
                 cartProducts.map((c,index)=>(
-                 <Cartcard key={index} cartproduct={c} removeCart={removeCart}></Cartcard>
+                 <Cartcard key={index} cartproduct={c}></Cartcard>
             ))
         }
         </div>
