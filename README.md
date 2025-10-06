@@ -34,7 +34,7 @@ It’s designed to demonstrate front-end skills and state management using **Red
 | Category | Technologies |
 |-----------|---------------|
 | **Frontend** | React, Redux, React Router |
-| **Styling** | Tailwind CSS / CSS3 |
+| **Styling** | Bootstrap / CSS3 |
 | **API** | FakeStoreAPI / Custom Data |
 | **Deployment** | Vercel |
 
@@ -50,15 +50,7 @@ It’s designed to demonstrate front-end skills and state management using **Red
 
 ---
 
-## 📸 Screenshots
 
-| 🏠 Homepage | 🔍 Product Detail | 🛒 Cart Page |
-|--------------|------------------|--------------|
-| ![Home Screenshot](screenshots/home.png) | ![Detail Screenshot](screenshots/detail.png) | ![Cart Screenshot](screenshots/cart.png) |
-
-*(Add your screenshots in a `screenshots` folder and update the file names above.)*
-
----
 
 ## ⚙️ Installation & Setup
 
