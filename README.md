@@ -1,3 +1,82 @@
+<!-- Header Section -->
+<h1 align="center">🛍️ React E-Commerce App</h1>
+<p align="center">
+A modern and responsive E-Commerce web application built with <b>React</b>, <b>Redux</b>, and <b>React Router</b> — delivering a smooth and interactive shopping experience.
+</p>
+
+---
+
+## 🚀 Live Demo
+🌐 **[View Project on Vercel](https://ecommerce-react-e4dcvjt5m-nimmys-projects-0fdf016c.vercel.app/productlist)**  
+
+---
+
+## 🪄 Overview
+This project simulates an online shopping experience with product listings, detailed product pages, a dynamic cart, and responsive design.  
+It’s designed to demonstrate front-end skills and state management using **Redux Toolkit**.
+
+---
+
+## 🌟 Features
+
+✅ **Home Page** — Welcoming homepage showcasing featured products  
+🧾 **Product Listing** — Displays products fetched from an API  
+🔍 **Product Details** — Shows individual product info and images  
+🛒 **Shopping Cart** — Add, remove, and update items in cart  
+👩‍💼 **About Us** — Describes the store’s mission and story  
+📞 **Contact Us** — Simple form for customer inquiries  
+💻 **Fully Responsive** — Works seamlessly on all devices  
+
+---
+
+## 🧰 Tech Stack
+
+| Category | Technologies |
+|-----------|---------------|
+| **Frontend** | React, Redux, React Router |
+| **Styling** | Tailwind CSS / CSS3 |
+| **API** | FakeStoreAPI / Custom Data |
+| **Deployment** | Vercel |
+
+---
+
+## 🧠 What I Learned
+
+- 🧩 State management using **Redux Toolkit**  
+- 🌀 Dynamic routing with **React Router DOM**  
+- 🧱 Creating reusable and modular UI components  
+- 🎨 Designing responsive layouts with Tailwind CSS  
+- ⚡ Integrating external API data dynamically  
+
+---
+
+## 📸 Screenshots
+
+| 🏠 Homepage | 🔍 Product Detail | 🛒 Cart Page |
+|--------------|------------------|--------------|
+| ![Home Screenshot](screenshots/home.png) | ![Detail Screenshot](screenshots/detail.png) | ![Cart Screenshot](screenshots/cart.png) |
+
+*(Add your screenshots in a `screenshots` folder and update the file names above.)*
+
+---
+
+## ⚙️ Installation & Setup
+
+To run this project locally:
+
+```bash
+# Clone the repository
+git clone https://github.com/nimmyks/ecommerce-app.git
+
+# Navigate to the project folder
+cd ecommerce-app
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm start
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
